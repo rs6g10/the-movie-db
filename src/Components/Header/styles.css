@@ -1,0 +1,19 @@
+.header {
+    margin: 30px 0;
+    padding: 0;
+}
+
+.logo {
+    width: 100%;
+    max-width: 60px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .logo {
+        display: inline-block;
+        margin: 0;
+    }
+}

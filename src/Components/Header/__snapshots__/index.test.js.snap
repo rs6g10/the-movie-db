@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render as expected 1`] = `
+<div
+  className="col-xs-12 header"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-xs-12 col-sm-6 col-lg-3"
+    >
+      <Link
+        replace={false}
+        to="/"
+      >
+        <img
+          alt="The Movie Database"
+          className="logo"
+          src="https://www.themoviedb.org/static_cache/v4/logos/stacked-green-cae7a95e2590dbdde28284ac26245cb2792788838f5c498b892e8d01c183e6f3.svg"
+        />
+      </Link>
+    </div>
+  </div>
+</div>
+`;

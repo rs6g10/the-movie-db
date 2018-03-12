@@ -6,6 +6,10 @@ FROM mhart/alpine-node:8.8
 ARG ARG_NODE_ENV=development
 ENV NODE_ENV=$ARG_NODE_ENV
 
+# Pass through API_KEY
+ARG ARG_API_KEY=MYSUPERSECRETKEY
+ENV API_KEY=$ARG_API_KEY
+
 # Install build tools for New Relic
 RUN apk add --no-cache make gcc g++ python
 

@@ -35,6 +35,7 @@ run:
 		-p 4000:4000 \
 		-u root \
 		-e NODE_ENV=development \
+		-e API_KEY=MYSUPERSECRETKEY \
 		-it the-movie-db /bin/sh
 
 attach:

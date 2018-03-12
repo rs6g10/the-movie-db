@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const key = process.env.API_KEY;
+
 class Movie extends Component {
   render() {
     const { params } = this.props.match;
