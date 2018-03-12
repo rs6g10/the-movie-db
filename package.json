@@ -2,6 +2,11 @@
   "name": "the-movie-db",
   "version": "0.1.0",
   "private": true,
+  "author": "Rahul Sharma <rahuldsharma@hotmail.co.uk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rs6g10/the-movie-db.git"
+  },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

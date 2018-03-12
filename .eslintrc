@@ -1,0 +1,38 @@
+parser: babel-eslint
+
+extends: eslint-config-airbnb
+
+plugins:
+  - react
+
+globals:
+  expect: true
+  jasmine: true
+  jest: true
+  describe: true
+  it: true
+  beforeEach: true
+  afterEach: true
+
+env:
+  browser: true
+  node: true
+
+rules:
+  generator-star-spacing: 0 # Fixes an async to generator issue, read more: https://github.com/babel/babel-eslint/issues/316
+  no-console: ["error", { allow: ["warn", "error"] }]
+
+  react/jsx-filename-extension: 0
+  import/extensions: [2, { "jsx": "never" }]
+  import/first: 0 # Disabled because of jest.mock, read more: https://github.com/benmosher/eslint-plugin-import/issues/472
+  import/no-extraneous-dependencies: [1, {"devDependencies": ["**/*.test.js"]}]
+
+  react/prop-types: [1, {ignore: ['actions', 'initialState', 'isServer']}]
+
+  import/prefer-default-export: 0 # Actions don't have default exports
+
+  react/no-unused-prop-types: 0 # This is too hard to validate
+  react/forbid-prop-types: 0
+
+  class-methods-use-this: 0
+  no-use-before-define: ["error", { "functions": false }]
