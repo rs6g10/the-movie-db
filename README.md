@@ -35,11 +35,12 @@ For the project to build, **these files must exist with exact filenames**:
   - ES6
 - Jest
 - Enzyme
-- Docker
+- [Docker](https://www.docker.com/community-edition)
 - The Movie DB [API](https://developers.themoviedb.org/3)
 
 
 ### Installation
+Please make sure you have Docker installed on your machine to run this app.
 
 ```
 $ git clone https://github.com/rs6g10/the-movie-db.git
