@@ -20,8 +20,10 @@ class Movie extends Component {
     const movieId = this.props.match.params.movieId;
     const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.props.apiKey}`;
     const movieCreditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${this.props.apiKey}`;
+    const movieVideoUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${this.props.apiKey}`;
     this.fetchMovieDetails(movieUrl);
     this.fetchMovieCredits(movieCreditsUrl);
+    this.fetchMovieVideos(movieVideoUrl);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -30,8 +32,10 @@ class Movie extends Component {
       const movieId = nextProps.match.params.movieId;
       const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.props.apiKey}`;
       const movieCreditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${this.props.apiKey}`;
+      const movieVideoUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${this.props.apiKey}`;
       this.fetchMovieDetails(movieUrl);
       this.fetchMovieCredits(movieCreditsUrl);
+      this.fetchMovieVideos(movieVideoUrl);
     }
   }
 
@@ -76,6 +80,21 @@ class Movie extends Component {
             datum.crew.filter(d => d.job.toLowerCase() === 'director') :
             [],
         });
+      }
+    }).catch((err) => {
+      this.setState({ loading: false, error: err });
+    });
+  }
+
+  fetchMovieVideos(url) {
+    fetch(url).then(res => parseResponse(res)).then((data) => {
+      if (data && data.results && data.results.length > 0) {
+        if (data.results[0].site && data.results[0].site.toLocaleLowerCase() === 'youtube') {
+          this.setState({
+            videoKey: data.results[0].key,
+            videoName: data.results[0].name,
+          });
+        }
       }
     }).catch((err) => {
       this.setState({ loading: false, error: err });
