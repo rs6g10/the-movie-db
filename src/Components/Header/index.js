@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Searchbox from '../Searchbox';
 import './styles.css';
 
-const TMDBLogo = 'https://www.themoviedb.org/static_cache/v4/logos/stacked-green-cae7a95e2590dbdde28284ac26245cb2792788838f5c498b892e8d01c183e6f3.svg';
+const TMDBLogo = 'https://www.themoviedb.org/static_cache/v4/logos/powered-by-rectangle-green-dcada16968ed648d5eb3b36bbcfdd8cdf804f723dcca775c8f2bf4cea025aad6.svg';
 
 const Header = ({ showResults, apiKey }) => (
   <div className="col-xs-12 header">
