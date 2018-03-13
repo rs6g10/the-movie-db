@@ -32,13 +32,11 @@ class LandingPage extends Component {
   fetchApi(url) {
     this.setState({ loading: true });
     fetch(url).then(res => parseResponse(res)).then((datum) => {
-      if (this.refs.moviesGrid) {
-        this.setState({ loading: false, error: null });
-        if (datum.results.length > 0) {
-          this.setState({
-            results: datum.results,
-          });
-        }
+      this.setState({ loading: false, error: null });
+      if (datum.results.length > 0) {
+        this.setState({
+          results: datum.results,
+        });
       }
     }).catch((err) => {
       this.setState({
@@ -64,7 +62,7 @@ class LandingPage extends Component {
           ))
           }
         </div>
-        <div className="movies-grid" ref="moviesGrid">
+        <div className="movies-grid">
           {this.state.loading &&
           <div className="row">
             <span className="loading">Loading...</span>
@@ -86,8 +84,10 @@ class LandingPage extends Component {
                 </div>
               </div>
               <div className="vote">
-                <span role="img"
-                      aria-label="star">⭐</span> {result.vote_average}
+                <span
+                  role="img"
+                  aria-label="star"
+                >⭐</span> {result.vote_average}
               </div>
             </Link>
           ))}
