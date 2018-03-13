@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './styles.css';
 import { convertToHollywoodMoney } from '../../utility';
 import Video from '../Video';
+
+import './styles.css';
 
 let backdropImage;
 
