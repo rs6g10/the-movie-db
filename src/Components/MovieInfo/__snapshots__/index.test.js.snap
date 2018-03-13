@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieInfo should render as expected with valid movieDetails 1`] = `
+<div
+  className="col-xs-12 movie-details"
+>
+  <div
+    className="container row"
+  >
+    <div
+      className="poster-container col-xs-12 col-md-4 pull-md-8 col-lg-5 pull-lg-6"
+    >
+      <img
+        alt="movie-poster"
+        className="poster"
+        id="poster"
+        src="https://image.tmdb.org/t/p/w500poster"
+      />
+    </div>
+    <div
+      className="info-container col-xs-12 col-md-8 push-md-4 col-lg-7 push-lg-5"
+    >
+      <h1 />
+      <span
+        className="tagline"
+      />
+      <p />
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="row info-container additional-info"
+    >
+      <div
+        className="col-sm-12"
+      >
+        Director:
+        <span
+          className="meta-data-small"
+        >
+          -
+        </span>
+      </div>
+      <div
+        className="col-sm-12"
+      >
+        Stars:
+        <span
+          className="meta-data-small"
+        />
+      </div>
+    </div>
+    <div
+      className="row info-container additional-info"
+    >
+      <div
+        className="col-sm-3"
+      >
+        Rating:
+        <span
+          className="meta-data"
+        />
+      </div>
+      <div
+        className="col-sm-3"
+      >
+        Released Date:
+        <span
+          className="meta-data"
+        />
+      </div>
+      <div
+        className="col-sm-3"
+      >
+        Running Time:
+        <span
+          className="meta-data"
+        />
+      </div>
+      <div
+        className="col-sm-3"
+      >
+        Box Office:
+        <span
+          className="meta-data"
+        >
+          $ 82588981217 Million
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

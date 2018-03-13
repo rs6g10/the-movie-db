@@ -21,6 +21,15 @@ exports[`Header should render as expected 1`] = `
         />
       </Link>
     </div>
+    <div
+      className="col-xs-12 col-sm-6 col-lg-9"
+    >
+      <Searchbox
+        apiKey="mysecretkey"
+        placeHolder="Search"
+        showResults={true}
+      />
+    </div>
   </div>
 </div>
 `;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render as expected when showResults is set to false 1`] = `
+<div
+  className="search-box"
+>
+  <div
+    className="search-box_content"
+  >
+    <input
+      className="search-box_input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+    />
+    <div
+      className="search-box_dropdown"
+    />
+  </div>
+</div>
+`;
+
+exports[`Header should render as expected when showResults is set to true 1`] = `
+<div
+  className="search-box"
+>
+  <div
+    className="search-box_content"
+  >
+    <input
+      className="search-box_input"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+    />
+    <div
+      className="search-box_dropdown"
+    />
+  </div>
+</div>
+`;

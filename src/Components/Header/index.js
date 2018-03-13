@@ -5,7 +5,7 @@ import './styles.css';
 
 const TMDBLogo = 'https://www.themoviedb.org/static_cache/v4/logos/stacked-green-cae7a95e2590dbdde28284ac26245cb2792788838f5c498b892e8d01c183e6f3.svg';
 
-const Header = () => (
+const Header = ({ showResults }) => (
   <div className="col-xs-12 header">
     <div className="row">
       <div className="col-xs-12 col-sm-6 col-lg-3">
@@ -16,7 +16,7 @@ const Header = () => (
       <div className="col-xs-12 col-sm-6 col-lg-9">
         <Searchbox
           placeHolder="Search"
-          showResults
+          showResults={showResults}
           apiKey="mysecretkey"
         />
       </div>

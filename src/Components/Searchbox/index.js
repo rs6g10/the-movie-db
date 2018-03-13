@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import ClassNames from 'classnames';
+import { parseResponse } from '../../utility';
 
 import './styles.css';
 
@@ -48,7 +49,7 @@ class Searchbox extends Component {
       loading: true,
       error: null,
     });
-    fetch(url).then(res => res.json()).then((data) => {
+    fetch(url).then(res => parseResponse(res)).then((data) => {
       if (data && data.results) {
         that.setState({
           searchResults: data.results,
@@ -57,7 +58,6 @@ class Searchbox extends Component {
         });
       }
     }).catch((err) => {
-      console.error('Could not find search results', err);
       this.setState({
         error: err,
       });
@@ -74,9 +74,9 @@ class Searchbox extends Component {
                 key={datum.id}
                 className={
                   ClassNames('search-box_item',
-                    { 'selected': datum.selected },
-                    { 'disable': datum.disable },
-                    { 'hidden': datum.hidden })}
+                    { selected: datum.selected },
+                    { disable: datum.disable },
+                    { hidden: datum.hidden })}
               >
                 <Link to={`/movie/${datum.id}`}>
                   {datum.title}
@@ -94,7 +94,7 @@ class Searchbox extends Component {
     const { placeHolder } = this.props;
     const { searchResults, loading, error } = this.state;
     return (
-      <div className={ClassNames('search-box', { 'open': !!searchResults })}>
+      <div className={ClassNames('search-box', { open: !!searchResults })}>
         <div className="search-box_content">
           <input
             type="text"
@@ -106,7 +106,11 @@ class Searchbox extends Component {
             {loading && <span>Loading...</span>}
             {!!searchResults && !loading && !error &&
             this.displayResultArray(searchResults)}
-            {error && <span>Error</span>}
+            {error &&
+            <div className="row">
+              <span className="not-found">{error.message}</span>
+            </div>
+            }
           </div>
         </div>
       </div>

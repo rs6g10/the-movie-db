@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie should render as expected with valid movieId 1`] = `
+<div>
+  <Header
+    showResults={true}
+  />
+  <MovieInfo
+    data={
+      Object {
+        "error": null,
+        "loading": false,
+        "showSearchResults": true,
+      }
+    }
+  />
+</div>
+`;
