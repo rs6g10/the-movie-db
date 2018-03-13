@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Movie from './Components/Movie';
 
-const API_KEY = process.env.API_KEY || 'mysuperdupersecretkey';
+const API_KEY = process.env.API_KEY || 'cfe422613b250f702980a3bbf9e90716';
 
 const HomeWithApiKey = props => (
   <Home apiKey={API_KEY} {...props} />
