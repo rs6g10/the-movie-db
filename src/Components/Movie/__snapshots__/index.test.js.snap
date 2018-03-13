@@ -3,6 +3,7 @@
 exports[`Movie should render as expected with valid movieId 1`] = `
 <div>
   <Header
+    apiKey="blah"
     showResults={true}
   />
   <MovieInfo

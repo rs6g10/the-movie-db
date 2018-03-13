@@ -3,7 +3,27 @@
 exports[`Home should render as expected 1`] = `
 <div>
   <Header
-    apiKey="MYSUPERSECRETKEY"
+    apiKey="blah"
+    showResults={false}
+  />
+  <LandingPage
+    apiKey="blah"
+    categories={
+      Array [
+        Object {
+          "key": "now_playing",
+          "title": "Now Showing",
+        },
+        Object {
+          "key": "upcoming",
+          "title": "Upcoming",
+        },
+        Object {
+          "key": "popular",
+          "title": "Popular",
+        },
+      ]
+    }
   />
 </div>
 `;

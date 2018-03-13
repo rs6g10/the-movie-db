@@ -21,7 +21,7 @@ class MovieInfo extends Component {
       data.director[0].name : '-';
     const stars = data.cast ? data.cast.map(x => x.name).join(', ') : '-';
     const noData = '-';
-    backdropImage = `https://image.tmdb.org/t/p/original${data.backdrop}`;
+    backdropImage = data.backdrop ? `https://image.tmdb.org/t/p/original${data.backdrop}` : '';
 
     if (totalRevenue === 'undefined' || totalRevenue === 0) {
       totalRevenue = noData;

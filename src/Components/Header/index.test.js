@@ -6,7 +6,7 @@ import { shallow } from 'enzyme';
 import Header from './';
 
 describe('Header', () => {
-  const props = { };
+  const props = { apiKey: 'blah' };
 
   const element = shallow(<Header {...props} />);
 

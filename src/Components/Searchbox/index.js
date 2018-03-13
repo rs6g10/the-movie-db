@@ -60,6 +60,7 @@ class Searchbox extends Component {
     }).catch((err) => {
       this.setState({
         error: err,
+        loading: false,
       });
     });
   }
@@ -108,7 +109,7 @@ class Searchbox extends Component {
             this.displayResultArray(searchResults)}
             {error &&
             <div className="row">
-              <span className="not-found">{error.message}</span>
+              <span className="error">{error.message}</span>
             </div>
             }
           </div>

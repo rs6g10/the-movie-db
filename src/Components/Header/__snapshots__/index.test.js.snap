@@ -25,9 +25,9 @@ exports[`Header should render as expected 1`] = `
       className="col-xs-12 col-sm-6 col-lg-9"
     >
       <Searchbox
-        apiKey="mysecretkey"
+        apiKey="blah"
         placeHolder="Search"
-        showResults={true}
+        showResults={false}
       />
     </div>
   </div>

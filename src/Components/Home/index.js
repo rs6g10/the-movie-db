@@ -1,12 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../Header';
+import LandingPage from '../LandingPage';
 
-const API_KEY = process.env.API_KEY;
-
-const Home = () => (
+const Home = ({ apiKey }) => (
   <div>
-    <Header apiKey={API_KEY} />
+    <Header apiKey={apiKey} />
+    <LandingPage apiKey={apiKey} />
   </div>
 );
+
+Home.propTypes = {
+  apiKey: PropTypes.string.isRequired,
+};
 
 export default Home;

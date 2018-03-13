@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should render as expected with correct state 1`] = `
+<div>
+  <div
+    className="welcome-categories"
+  >
+    <div
+      aria-hidden={true}
+      className="now_playing welcome-category active"
+      key="category-now_playing"
+      onClick={[Function]}
+    >
+      Now Showing
+    </div>
+    <div
+      aria-hidden={true}
+      className="upcoming welcome-category"
+      key="category-upcoming"
+      onClick={[Function]}
+    >
+      Upcoming
+    </div>
+    <div
+      aria-hidden={true}
+      className="popular welcome-category"
+      key="category-popular"
+      onClick={[Function]}
+    >
+      Popular
+    </div>
+  </div>
+  <div
+    className="movies-grid"
+  >
+    <div
+      className="row"
+    >
+      <span
+        className="loading"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;

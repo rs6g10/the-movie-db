@@ -1,5 +1,9 @@
-.not-found {
+.error, .loading {
     margin: 0 auto;
     color: white;
     font-size: larger;;
+}
+
+.error {
+    color: orangered;;
 }

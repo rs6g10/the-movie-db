@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import Header from '../Header';
 import MovieInfo from '../MovieInfo';
 import { parseResponse } from '../../utility';
@@ -83,18 +83,23 @@ class Movie extends Component {
   }
 
   render() {
+    const state = this.state;
     return (
       <div>
-        <Header showResults={this.state.showSearchResults} />
-        {this.state.error &&
+        <Header showResults={state.showSearchResults} apiKey={this.props.apiKey} />
+        {state.error &&
         <div className="row">
-          <span className="not-found">{this.state.error.message}</span>
+          <span className="error">{state.error.message}</span>
         </div>
         }
-        {!this.state.error && this.state && <MovieInfo data={this.state} />}
+        {!state.error && state && <MovieInfo data={state} />}
       </div>
     );
   }
 }
+
+Movie.propTypes = {
+  apiKey: PropTypes.string.isRequired,
+};
 
 export default Movie;
